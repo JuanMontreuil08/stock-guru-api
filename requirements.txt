@@ -1,0 +1,14 @@
+Flask==2.0.1
+gunicorn==20.1.0
+werkzeug==2.0.3
+langchain
+langgraph
+langchain-openai
+langchain_core
+langchain-community
+langchain-text-splitters
+langchain-elasticsearch
+google-cloud-storage<3.0.0
+firebase-admin
+pandas
+langsmith
