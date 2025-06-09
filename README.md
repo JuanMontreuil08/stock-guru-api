@@ -19,3 +19,37 @@ Stock Guru has access to the following tools to provide answers to the user's qu
 **5. Google Cloud Storage:** Tool to upload the generated mp3 file to Google Cloud Storage in order to make it public. The tool outputs a public url.
 
 **6. GMAIL:** The agent can send its responses in HTML format to the user's email address. 
+
+## Architecture
+
+## Quick Start
+
+**Create a GCP Project**
+
+Access the [GCP](https://cloud.google.com/?hl=en) console and create a New Project.
+
+**Deploy Elasticsearch in GCP**
+
+1. Create a new Virtual Machine instance in the console.
+
+2. Execute the following commands in the SSH
+
+```
+sudo apt-get install wget
+
+wget -qO - https://artifacts.elastic.co/GPG-KEY-elasticsearch | sudo gpg --dearmor -o /usr/share/keyrings/elasticsearch-keyring.gpg
+
+sudo apt-get install apt-transport-https
+
+echo "deb [signed-by=/usr/share/keyrings/elasticsearch-keyring.gpg] https://artifacts.elastic.co/packages/8.x/apt stable main" | sudo tee /etc/apt/sources.list.d/elastic-8.x.list
+
+sudo apt-get update && sudo apt-get install elasticsearch
+
+sudo /bin/systemctl daemon-reload
+
+sudo /bin/systemctl enable elasticsearch.service
+```
+
+This will generate your user credentials to access Elasticsearch
+
+3. 
