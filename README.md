@@ -22,7 +22,7 @@ Stock Guru has access to the following tools to provide answers to the user's qu
 
 ## Architecture
 
-<img src="architecture.png" width="600"/>
+<img src="architecture.png">
 
 ## Quick Start
 
