@@ -24,7 +24,7 @@ Stock Guru has access to the following tools to provide answers to the user's qu
 
 <img src="architecture.png">
 
-## Quick Start
+## Deploy your own Agent API
 
 **Create a GCP Project**
 
@@ -81,23 +81,23 @@ xpack.security.http.ssl:
 sudo systemctl start elasticsearch.service
 ```
 
-7. Open Firewall ports in GCP (Recommended)
+**Open Firewall ports in GCP (Recommended)**
 
 Open port 9200 in the [GCP](https://cloud.google.com/?hl=en) firewall
 
-8. Deploy Cloud SQL in [GCP](https://cloud.google.com/?hl=en)
+**Deploy Cloud SQL in [GCP](https://cloud.google.com/?hl=en)**
 
- a. Access the console
+1. Access the console
  
- b. Create an instance
+2. Create an instance
  
- c. Choose PostgreSQL
+3. Choose PostgreSQL
  
- d. Complete the required fields and create instance
+4. Complete the required fields and create instance
  
- e. Access your instance's configuration
+5. Access your instance's configuration
  
- f. Connections -> networking
+6. Connections -> networking
  
- g. Click ADD A NETWORK. For testing purposes, you can specify 0.0.0.0/0
+7. Click ADD A NETWORK. For testing purposes, you can specify 0.0.0.0/0
 
