@@ -124,3 +124,4 @@ gcloud run deploy <your_app_name> --image gcr.io/<your_GCP_project_ID>/<your_app
 
 You will see your **API Url** in the Cloud Run interface.
 
+<img src="Cloud Run.png">
