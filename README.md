@@ -83,7 +83,7 @@ sudo systemctl start elasticsearch.service
 
 **Open Firewall ports in GCP (Recommended)**
 
-Open port 9200 in the [GCP](https://cloud.google.com/?hl=en) firewall
+Open port 9200 in the [GCP](https://cloud.google.com/?hl=en) firewall.
 
 **Deploy Cloud SQL in [GCP](https://cloud.google.com/?hl=en)**
 
@@ -100,4 +100,27 @@ Open port 9200 in the [GCP](https://cloud.google.com/?hl=en) firewall
 6. Connections -> networking
  
 7. Click ADD A NETWORK. For testing purposes, you can specify 0.0.0.0/0
+
+**Add your APIs keys in the keys folder**
+
+```
+stock-guru-api/
+│
+├── README.md
+└── keys/
+    └── api_openai.txt
+    └── api_alpha.txt
+    ...
+    ...
+```
+
+**Deploy your API with Cloud Run**
+
+```
+gcloud builds submit --tag gcr.io/<your_GCP_project_ID>/<your_app_name>:latest
+
+gcloud run deploy <your_app_name> --image gcr.io/<your_GCP_project_ID>/<your_app_name>:latest --platform managed --region us-west4 --allow-unauthenticated
+```
+
+You will see your **API Url** in the Cloud Run interface.
 
