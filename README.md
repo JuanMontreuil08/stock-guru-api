@@ -54,4 +54,44 @@ sudo /bin/systemctl enable elasticsearch.service
 
 This will generate your user credentials to access Elasticsearch
 
-3. 
+3. Access the elasticsearch.yml file with the command:
+
+```
+sudo nano /etc/elasticsearch/elasticsearch.yml
+```
+
+4. Edit the file (Uncomment)
+
+```
+network.host: 0.0.0.0
+http.port: 9200
+```
+
+5. Edit the file (set the enabled value to false)
+
+```
+xpack.security.http.ssl:
+ enabled: false
+ keystore.path: certs/http.p12
+```
+
+6. Initialize the service
+
+```
+sudo systemctl start elasticsearch.service
+```
+
+7. Open Firewall ports in GCP (Recommended)
+
+Open port 9200 in the [GCP](https://cloud.google.com/?hl=en) firewall
+
+8. Deploy Cloud SQL in [GCP](https://cloud.google.com/?hl=en)
+
+ a. Access the console
+ b. Create an instance
+ c. Choose PostgreSQL
+ d. Complete the required fields and create instance
+ e. Access your instance's configuration
+ f. Connections -> networking
+ g. Click ADD A NETWORK. For testing purposes, you can specify 0.0.0.0/0
+
