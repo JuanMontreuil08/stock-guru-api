@@ -88,10 +88,16 @@ Open port 9200 in the [GCP](https://cloud.google.com/?hl=en) firewall
 8. Deploy Cloud SQL in [GCP](https://cloud.google.com/?hl=en)
 
  a. Access the console
+ 
  b. Create an instance
+ 
  c. Choose PostgreSQL
+ 
  d. Complete the required fields and create instance
+ 
  e. Access your instance's configuration
+ 
  f. Connections -> networking
+ 
  g. Click ADD A NETWORK. For testing purposes, you can specify 0.0.0.0/0
 
