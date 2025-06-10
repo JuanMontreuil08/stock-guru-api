@@ -24,7 +24,7 @@ Stock Guru has access to the following tools to provide answers to the user's qu
 
 <img src="architecture.png">
 
-## Deploy your own Agent API
+## Deploy with Google Cloud
 
 **Create a GCP Project**
 
