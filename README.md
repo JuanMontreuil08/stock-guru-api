@@ -125,3 +125,7 @@ gcloud run deploy <your_app_name> --image gcr.io/<your_GCP_project_ID>/<your_app
 You will see your **API Url** in the Cloud Run interface.
 
 <img src="Cloud Run.png">
+
+## Vercel Integration
+
+To connect your API with Vercel and deploy a chat UI, simply follow the instructions provided in the [ui-agent-vercel](https://github.com/JuanMontreuil08/ui-agent-vercel) repository.
